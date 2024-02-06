@@ -1,0 +1,21 @@
+<ion-content class="ion-padding">
+  <ion-item *ngFor="let animal of animals; let i = index" [color]="animal.color">
+    <ion-thumbnail slot="start">
+      <img [src]="animal.imageUrl" alt="{{ animal.name }} Image">
+    </ion-thumbnail>
+    <ion-label>{{ animal.name }}</ion-label>
+    <ion-input [(ngModel)]="animal.userInput" placeholder="Ingrese el color" type="text" id="droppable{{i}}"
+      (drop)="onDrop($event, animal)" (dragover)="onDragOver($event)"></ion-input>
+    <ion-button (click)="checkColor(animal)">Verificar</ion-button>
+  </ion-item>
+  <div id="draggableYellow" *ngIf="showDraggedElementYellow" draggable="true"
+    (dragstart)="onDragStart($event, 'Amarillo')">Amarillo</div>
+  <div id="draggablePurple" *ngIf="showDraggedElementPurple" draggable="true" (dragstart)="onDragStart($event, 'Morado')">
+    Morado</div>
+  <div id="draggableBrown" *ngIf="showDraggedElementBrown" draggable="true" (dragstart)="onDragStart($event, 'Cafe')">Cafe
+  </div>
+
+  <br>
+  <ion-button (click)="finishGame()">Terminar Juego</ion-button>
+  <br><br>
+</ion-content>

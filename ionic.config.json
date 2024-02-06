@@ -1,0 +1,7 @@
+{
+  "name": "GameColors",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
