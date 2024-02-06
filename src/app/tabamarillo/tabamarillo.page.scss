@@ -5,3 +5,34 @@ ion-item {
     background-color: brown;
     color: white;
 }
+.drags-yellow {
+    background-color: yellow;
+}
+
+.drags-purple {
+    background-color: purple;
+    color: white;
+}
+
+.drags-brown {
+    background-color: brown;
+    color: white;
+}
+
+/* Estilos para ion-item-divider */
+ion-item-divider {
+    font-weight: bold;
+    /* Establece el peso de la fuente en negrita */
+    font-size: 1.2em;
+    /* Tamaño de la fuente */
+    color: #333;
+    /* Color del texto */
+    border-top: 2px solid #ccc;
+    /* Borde superior */
+    border-bottom: 2px solid #ccc;
+    /* Borde inferior */
+    margin-top: 20px;
+    /* Margen superior */
+    margin-bottom: 20px;
+    /* Margen inferior */
+}

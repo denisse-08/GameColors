@@ -8,12 +8,19 @@
       (drop)="onDrop($event, animal)" (dragover)="onDragOver($event)"></ion-input>
     <ion-button (click)="checkColor(animal)">Verificar</ion-button>
   </ion-item>
-  <div id="draggableYellow" *ngIf="showDraggedElementYellow" draggable="true"
-    (dragstart)="onDragStart($event, 'Amarillo')">Amarillo</div>
-  <div id="draggablePurple" *ngIf="showDraggedElementPurple" draggable="true" (dragstart)="onDragStart($event, 'Morado')">
-    Morado</div>
-  <div id="draggableBrown" *ngIf="showDraggedElementBrown" draggable="true" (dragstart)="onDragStart($event, 'Cafe')">Cafe
-  </div>
+  <ion-item-divider *ngIf="showDraggedElementYellow" class="draggable-divider" draggable="true"
+    (dragstart)="onDragStart($event, 'Amarillo')" style="--ion-background-color: yellow;">
+    <ion-label>Amarillo</ion-label>
+  </ion-item-divider>
+  <ion-item-divider *ngIf="showDraggedElementPurple" class="draggable-divider" draggable="true"
+    (dragstart)="onDragStart($event, 'Morado')" style="--ion-background-color: purple;">
+    <ion-label>Morado</ion-label>
+  </ion-item-divider>
+  <ion-item-divider *ngIf="showDraggedElementBrown" class="draggable-divider" draggable="true"
+    (dragstart)="onDragStart($event, 'Cafe')" style="--ion-background-color: brown;">
+    <ion-label>Cafe</ion-label>
+  </ion-item-divider>
+
 
   <br>
   <ion-button (click)="finishGame()">Terminar Juego</ion-button>
